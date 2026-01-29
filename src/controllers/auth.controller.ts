@@ -32,6 +32,22 @@ export const login = async (req: Request, res: Response) => {
     });
   }
 
+  // Check if this email is linked to an OAuth provider
+  const providerCheck = await db.query(
+    `SELECT ap.provider
+     FROM auth_providers ap
+     JOIN users u ON u.id = ap.user_id
+     WHERE u.email = $1`,
+    [email]
+  );
+
+  if ((providerCheck.rowCount ?? 0) > 0) {
+    return res.status(400).json({
+      error: "OAuth account",
+      message: `This account was created using ${providerCheck.rows[0].provider}. Please sign in with ${providerCheck.rows[0].provider}.`
+    });
+  }
+
   const user = await validateUser(email, password);
   if (!user) {
     return res.status(401).json({

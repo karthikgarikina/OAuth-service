@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@types/cors": "^2.8.17",
+    "axios": "^1.13.4",
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
@@ -16,6 +17,7 @@
     "express-rate-limit": "^7.3.0",
     "jsonwebtoken": "^9.0.2",
     "pg": "^8.17.2",
+    "rate-limit-redis": "^4.3.1",
     "redis": "^4.6.13",
     "uuid": "^9.0.1"
   },

@@ -1,8 +1,8 @@
 import { createClient } from "redis";
 import { env } from "./env";
 
-export const redis = createClient({
+export const redisClient = createClient({
   url: env.REDIS_URL
 });
 
-redis.connect();
+redisClient.connect();

@@ -1,9 +1,10 @@
 import express from "express";
 import cors from "cors";
 import { db } from "./config/db";
-import { redis } from "./config/redis";
+import { redisClient } from "./config/redis";
 import authRoutes from "./routes/auth.routes";
 import userRoutes from "./routes/user.routes";
+import oauthRoutes from "./routes/oauth.routes";
 
 const app = express();
 
@@ -29,7 +30,7 @@ app.get("/health", async (_req, res) => {
   }
 
   try {
-    await redis.ping();
+    await redisClient.ping();
   }catch {
     health.status = "degraded";
     health.services.cache = "down";
@@ -42,5 +43,6 @@ app.get("/health", async (_req, res) => {
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/auth", oauthRoutes);
 
 export default app;
