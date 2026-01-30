@@ -36,7 +36,7 @@ cd OAuth-service
 
 ### 2️⃣ Configure environment variables
 ```bash
-cp .env.example .env
+cp .env
 ```
 
 Fill in the required values:
@@ -94,9 +94,3 @@ This approach prioritizes **runtime correctness** and **production stability**.
 - All services run in isolated containers.
 - Health checks ensure proper startup order.
 - Redis is shared across instances for consistent rate limiting.
-
----
-
-## 📄 License
-
-This project is intended for educational and evaluation purposes.
