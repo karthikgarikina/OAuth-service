@@ -77,7 +77,8 @@ The API will be available once all containers are healthy.
 ---
 ## 🎥 Video Demo
 
-A complete walkthrough of the OAuth 2.0 Authentication Service:
+A complete walkthrough of the OAuth 2.0 Authentication Service
+
 📺 **Demo Video:**  
 [Watch the video demo here](https://www.youtube.com/watch?v=aqZYBhMIXgo)
 
