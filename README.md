@@ -73,6 +73,7 @@ The API will be available once all containers are healthy.
 ### User Routes
 - `GET http://localhost:9090/api/users/me` – Get current authenticated user
 - `GET http://localhost:9090/api/users` – Get all users (**Admin only**)
+- `PATCH http://localhost:9090/api/users/me` – Update user name
 
 ---
 
