@@ -36,7 +36,7 @@ cd OAuth-service
 
 ### 2️⃣ Configure environment variables
 ```bash
-cp .env.example .env
+cp .env
 ```
 
 Fill in the required values:
@@ -76,6 +76,14 @@ The API will be available once all containers are healthy.
 - `PATCH http://localhost:9090/api/users/me` – Update user name
 
 ---
+## 🎥 Video Demo
+
+A complete walkthrough of the OAuth 2.0 Authentication Service
+
+📺 **Demo Video:**  
+[Watch the video demo here](https://www.youtube.com/watch?v=aqZYBhMIXgo)
+
+---
 
 ## 🧪 Testing
 
@@ -95,9 +103,3 @@ This approach prioritizes **runtime correctness** and **production stability**.
 - All services run in isolated containers.
 - Health checks ensure proper startup order.
 - Redis is shared across instances for consistent rate limiting.
-
----
-
-## 📄 License
-
-This project is intended for educational and evaluation purposes.
